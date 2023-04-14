@@ -2,7 +2,7 @@
 <!-- banner -->
 <div class="inside-banner">
   <div class="container">
-    <span class="pull-right"><a href="#">Home</a> / Blogs</span>
+    <span class="pull-right"><a href="{{route('index')}}">Home</a> / Blogs</span>
     <h2>Blogs</h2>
 </div>
 </div>
@@ -40,15 +40,15 @@
                 <div class="tab-pane" id="tab1">
                   <ul class="list-unstyled">
                   <li>
-                  <h5><a href="blogdetail.php">Real estate marketing growing</a></h5>
+                  <h5><a href="{{route('blogdetail')}}">Real estate marketing growing</a></h5>
                             <div class="info">Posted on: Jan 20, 2013</div>
                             </li>
                              <li>
-                  <h5><a href="blogdetail.php">Real estate marketing growing</a></h5>
+                  <h5><a href="{{route('blogdetail')}}">Real estate marketing growing</a></h5>
                             <div class="info">Posted on: Jan 20, 2013</div>
                             </li>
                              <li>
-                  <h5><a href="blogdetail.php">Real estate marketing growing</a></h5>
+                  <h5><a href="{{route('blogdetail')}}">Real estate marketing growing</a></h5>
                             <div class="info">Posted on: Jan 20, 2013</div>
                             </li>
                             </ul>
@@ -56,17 +56,17 @@
                 <div class="tab-pane" id="tab2">
                 <ul  class="list-unstyled">
                   <li>
-                  <h5><a href="blogdetail.php">Market update on new apartments</a></h5>
+                  <h5><a href="{{route('blogdetail')}}">Market update on new apartments</a></h5>
                             <div class="info">Posted on: Jan 20, 2013</div>
                             </li>
 
                   <li>
-                  <h5><a href="blogdetail.php">Market update on new apartments</a></h5>
+                  <h5><a href="{{route('blogdetail')}}">Market update on new apartments</a></h5>
                             <div class="info">Posted on: Jan 20, 2013</div>
                             </li>
 
                   <li>
-                  <h5><a href="blogdetail.php">Market update on new apartments</a></h5>
+                  <h5><a href="{{route('blogdetail')}}">Market update on new apartments</a></h5>
                             <div class="info">Posted on: Jan 20, 2013</div>
                             </li>
                             </ul>
@@ -74,12 +74,12 @@
                 <div class="tab-pane active" id="tab3">
                 <ul class="list-unstyled">
                             <li>
-                  <h5><a href="blogdetail.php">Creative business to takeover the market</a></h5>
+                  <h5><a href="{{route('blogdetail')}}">Creative business to takeover the market</a></h5>
                             <div class="info">Posted on: Jan 20, 2013</div>
                             </li>
 
                             <li>
-                  <h5><a href="blogdetail.php">Creative business to takeover the market</a></h5>
+                  <h5><a href="{{route('blogdetail')}}">Creative business to takeover the market</a></h5>
                             <div class="info">Posted on: Jan 20, 2013</div>
                             </li>
                             </ul>

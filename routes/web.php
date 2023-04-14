@@ -21,7 +21,8 @@ Route::controller(LinksController::class)->group(function() {
     Route::get('/blog', 'blog')->name('blog');
     Route::get('/contact', 'contact')->name('contact');
     Route::get('/buysalerent', 'buysalerent')->name('buysalerent');
-
+    Route::get('/blogdetail', 'blogdetail')->name('blogdetail');
+    Route::get('/propertydetail', 'property_detail')->name('propertydetail');
 });
 
 require __DIR__.'/auth.php';

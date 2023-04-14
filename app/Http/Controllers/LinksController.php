@@ -26,4 +26,10 @@ class LinksController extends Controller
     public function buysalerent(){
         return view('buysalerent');
     }
+    public function blogdetail(){
+        return view('blogdetail');
+    }
+    public function property_detail(){
+        return view('property-detail');
+    }
 }

@@ -2,7 +2,7 @@
 <!-- banner -->
 <div class="inside-banner">
   <div class="container">
-    <span class="pull-right"><a href="index.blade.php">Home</a> / Buy, Sale & Rent</span>
+    <span class="pull-right"><a href="{{route('index')}}">Home</a> / Buy, Sale & Rent</span>
     <h2>Buy, Sale & Rent</h2>
 </div>
 </div>
@@ -22,7 +22,6 @@
               <select class="form-control">
                 <option>Buy</option>
                 <option>Rent</option>
-                <option>Sale</option>
               </select>
             </div>
             <div class="col-lg-7">
@@ -41,7 +40,6 @@
               <select class="form-control">
                 <option>Property Type</option>
                 <option>Apartment</option>
-                <option>Building</option>
                 <option>Office Space</option>
               </select>
               </div>
@@ -50,36 +48,34 @@
 
   </div>
 
-
-
 <div class="hot-properties hidden-xs">
 <h4>Hot Properties</h4>
 <div class="row">
-                <div class="col-lg-4 col-sm-5"><img src="{{ asset('images/properties/1.jpg') }}" class="img-responsive img-circle" alt="properties"></div>
-                <div class="col-lg-8 col-sm-7">
-                  <h5><a href="property-detail.blade.php">Integer sed porta quam</a></h5>
-                  <p class="price">$300,000</p> </div>
-              </div>
+    <div class="col-lg-4 col-sm-5"><img src="{{ asset('images/properties/1.jpg') }}" class="img-responsive img-circle" alt="properties"></div>
+    <div class="col-lg-8 col-sm-7">
+      <h5><a href="{{route('propertydetail')}}">Integer sed porta quam</a></h5>
+      <p class="price">$300,000</p> </div>
+</div>
 <div class="row">
-                <div class="col-lg-4 col-sm-5"><img src="{{ asset('images/properties/1.jpg') }}" class="img-responsive img-circle" alt="properties"></div>
-                <div class="col-lg-8 col-sm-7">
-                  <h5><a href="property-detail.blade.php">Integer sed porta quam</a></h5>
-                  <p class="price">$300,000</p> </div>
-              </div>
+    <div class="col-lg-4 col-sm-5"><img src="{{ asset('images/properties/1.jpg') }}" class="img-responsive img-circle" alt="properties"></div>
+    <div class="col-lg-8 col-sm-7">
+      <h5><a href="{{route('propertydetail')}}">Integer sed porta quam</a></h5>
+      <p class="price">$300,000</p> </div>
+</div>
 
 <div class="row">
-                <div class="col-lg-4 col-sm-5"><img src="{{ asset('images/properties/1.jpg') }}" class="img-responsive img-circle" alt="properties"></div>
-                <div class="col-lg-8 col-sm-7">
-                  <h5><a href="property-detail.blade.php">Integer sed porta quam</a></h5>
-                  <p class="price">$300,000</p> </div>
-              </div>
+    <div class="col-lg-4 col-sm-5"><img src="{{ asset('images/properties/1.jpg') }}" class="img-responsive img-circle" alt="properties"></div>
+    <div class="col-lg-8 col-sm-7">
+      <h5><a href="{{route('propertydetail')}}">Integer sed porta quam</a></h5>
+      <p class="price">$300,000</p> </div>
+</div>
 
 <div class="row">
-                <div class="col-lg-4 col-sm-5"><img src="{{ asset('images/properties/1.jpg') }}" class="img-responsive img-circle" alt="properties"></div>
-                <div class="col-lg-8 col-sm-7">
-                  <h5><a href="property-detail.blade.php">Integer sed porta quam</a></h5>
-                  <p class="price">$300,000</p> </div>
-              </div>
+    <div class="col-lg-4 col-sm-5"><img src="{{ asset('images/properties/1.jpg') }}" class="img-responsive img-circle" alt="properties"></div>
+    <div class="col-lg-8 col-sm-7">
+      <h5><a href="{{route('propertydetail')}}">Integer sed porta quam</a></h5>
+      <p class="price">$300,000</p> </div>
+</div>
 
 </div>
 
@@ -105,25 +101,101 @@
         <div class="image-holder"><img src="{{ asset('images/properties/1.jpg') }}" class="img-responsive" alt="properties">
           <div class="status sold">Sold</div>
         </div>
-        <h4><a href="property-detail.blade.php">Royal Inn</a></h4>
+        <h4><a href="{{route('propertydetail')}}">Royal Inn</a></h4>
         <p class="price">Price: $234,900</p>
         <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
-        <a class="btn btn-primary" href="property-detail.blade.php">View Details</a>
+        <a class="btn btn-primary" href="{{route('propertydetail')}}">View Details</a>
       </div>
       </div>
       <!-- properties -->
-
-
-      <!-- properties -->
+    <!-- properties -->
       <div class="col-lg-4 col-sm-6">
       <div class="properties">
-        <div class="image-holder"><img src="{{ asset('images/properties/2.jpg') }}" class="img-responsive" alt="properties">
+        <div class="image-holder"><img src="{{ asset('images/properties/1.jpg') }}" class="img-responsive" alt="properties">
           <div class="status sold">Sold</div>
         </div>
-        <h4><a href="property-detail.blade.php">Royal Inn</a></h4>
+        <h4><a href="{{route('propertydetail')}}">Royal Inn</a></h4>
         <p class="price">Price: $234,900</p>
         <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
-        <a class="btn btn-primary" href="property-detail.blade.php">View Details</a>
+        <a class="btn btn-primary" href="{{route('propertydetail')}}">View Details</a>
+      </div>
+      </div>
+      <!-- properties -->
+    <!-- properties -->
+      <div class="col-lg-4 col-sm-6">
+      <div class="properties">
+        <div class="image-holder"><img src="{{ asset('images/properties/1.jpg') }}" class="img-responsive" alt="properties">
+          <div class="status sold">Sold</div>
+        </div>
+        <h4><a href="{{route('propertydetail')}}">Royal Inn</a></h4>
+        <p class="price">Price: $234,900</p>
+        <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
+        <a class="btn btn-primary" href="{{route('propertydetail')}}">View Details</a>
+      </div>
+      </div>
+      <!-- properties -->
+    <!-- properties -->
+      <div class="col-lg-4 col-sm-6">
+      <div class="properties">
+        <div class="image-holder"><img src="{{ asset('images/properties/1.jpg') }}" class="img-responsive" alt="properties">
+          <div class="status sold">Sold</div>
+        </div>
+        <h4><a href="{{route('propertydetail')}}">Royal Inn</a></h4>
+        <p class="price">Price: $234,900</p>
+        <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
+        <a class="btn btn-primary" href="{{route('propertydetail')}}">View Details</a>
+      </div>
+      </div>
+      <!-- properties -->
+    <!-- properties -->
+      <div class="col-lg-4 col-sm-6">
+      <div class="properties">
+        <div class="image-holder"><img src="{{ asset('images/properties/1.jpg') }}" class="img-responsive" alt="properties">
+          <div class="status sold">Sold</div>
+        </div>
+        <h4><a href="{{route('propertydetail')}}">Royal Inn</a></h4>
+        <p class="price">Price: $234,900</p>
+        <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
+        <a class="btn btn-primary" href="{{route('propertydetail')}}">View Details</a>
+      </div>
+      </div>
+      <!-- properties -->
+    <!-- properties -->
+      <div class="col-lg-4 col-sm-6">
+      <div class="properties">
+        <div class="image-holder"><img src="{{ asset('images/properties/1.jpg') }}" class="img-responsive" alt="properties">
+          <div class="status sold">Sold</div>
+        </div>
+        <h4><a href="{{route('propertydetail')}}">Royal Inn</a></h4>
+        <p class="price">Price: $234,900</p>
+        <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
+        <a class="btn btn-primary" href="{{route('propertydetail')}}">View Details</a>
+      </div>
+      </div>
+      <!-- properties -->
+    <!-- properties -->
+      <div class="col-lg-4 col-sm-6">
+      <div class="properties">
+        <div class="image-holder"><img src="{{ asset('images/properties/1.jpg') }}" class="img-responsive" alt="properties">
+          <div class="status sold">Sold</div>
+        </div>
+        <h4><a href="{{route('propertydetail')}}">Royal Inn</a></h4>
+        <p class="price">Price: $234,900</p>
+        <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
+        <a class="btn btn-primary" href="{{route('propertydetail')}}">View Details</a>
+      </div>
+      </div>
+      <!-- properties -->
+    <!-- properties -->
+      <div class="col-lg-4 col-sm-6">
+      <div class="properties">
+        <div class="image-holder"><img src="{{ asset('images/properties/1.jpg') }}" class="img-responsive" alt="properties">
+          <div class="status sold">Sold</div>
+        </div>
+        <h4><a href="{{route('propertydetail')}}">Royal Inn</a></h4>
+        <p class="price">Price: $234,900</p>
+        <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
+        <a class="btn btn-primary" href="{{route('propertydetail')}}">View Details</a>
       </div>
       </div>
       <!-- properties -->
@@ -134,135 +206,10 @@
         <div class="image-holder"><img src="{{ asset('images/properties/3.jpg') }}" class="img-responsive" alt="properties">
           <div class="status sold">Sold</div>
         </div>
-        <h4><a href="property-detail.blade.php">Royal Inn</a></h4>
+        <h4><a href="{{route('propertydetail')}}">Royal Inn</a></h4>
         <p class="price">Price: $234,900</p>
         <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
-        <a class="btn btn-primary" href="property-detail.blade.php">View Details</a>
-      </div>
-      </div>
-      <!-- properties -->
-
-      <!-- properties -->
-      <div class="col-lg-4 col-sm-6">
-      <div class="properties">
-        <div class="image-holder"><img src="{{ asset('images/properties/1.jpg') }}" class="img-responsive" alt="properties">
-          <div class="status sold">Sold</div>
-        </div>
-        <h4><a href="property-detail.blade.php">Royal Inn</a></h4>
-        <p class="price">Price: $234,900</p>
-        <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
-        <a class="btn btn-primary" href="property-detail.blade.php">View Details</a>
-      </div>
-      </div>
-      <!-- properties -->
-
-      <!-- properties -->
-      <div class="col-lg-4 col-sm-6">
-      <div class="properties">
-        <div class="image-holder"><img src="{{ asset('images/properties/4.jpg') }}" class="img-responsive" alt="properties">
-          <div class="status sold">Sold</div>
-        </div>
-        <h4><a href="property-detail.blade.php">Royal Inn</a></h4>
-        <p class="price">Price: $234,900</p>
-        <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
-        <a class="btn btn-primary" href="property-detail.blade.php">View Details</a>
-      </div>
-      </div>
-      <!-- properties -->
-
-      <!-- properties -->
-      <div class="col-lg-4 col-sm-6">
-      <div class="properties">
-        <div class="image-holder"><img src="{{ asset('images/properties/1.jpg') }}" class="img-responsive" alt="properties">
-          <div class="status sold">Sold</div>
-        </div>
-        <h4><a href="property-detail.blade.php">Royal Inn</a></h4>
-        <p class="price">Price: $234,900</p>
-        <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
-        <a class="btn btn-primary" href="property-detail.blade.php">View Details</a>
-      </div>
-      </div>
-      <!-- properties -->
-
-      <!-- properties -->
-      <div class="col-lg-4 col-sm-6">
-      <div class="properties">
-        <div class="image-holder"><img src="{{ asset('images/properties/4.jpg') }}" class="img-responsive" alt="properties">
-          <div class="status sold">Sold</div>
-        </div>
-        <h4><a href="property-detail.blade.php">Royal Inn</a></h4>
-        <p class="price">Price: $234,900</p>
-        <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
-        <a class="btn btn-primary" href="property-detail.blade.php">View Details</a>
-      </div>
-      </div>
-      <!-- properties -->
-
-      <!-- properties -->
-      <div class="col-lg-4 col-sm-6">
-      <div class="properties">
-        <div class="image-holder"><img src="{{ asset('images/properties/3.jpg') }}" class="img-responsive" alt="properties">
-          <div class="status sold">Sold</div>
-        </div>
-        <h4><a href="property-detail.blade.php">Royal Inn</a></h4>
-        <p class="price">Price: $234,900</p>
-        <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
-        <a class="btn btn-primary" href="property-detail.blade.php">View Details</a>
-      </div>
-      </div>
-      <!-- properties -->
-
-      <!-- properties -->
-      <div class="col-lg-4 col-sm-6">
-      <div class="properties">
-        <div class="image-holder"><img src="{{ asset('images/properties/2.jpg') }}" class="img-responsive" alt="properties">
-          <div class="status sold">Sold</div>
-        </div>
-        <h4><a href="property-detail.blade.php">Royal Inn</a></h4>
-        <p class="price">Price: $234,900</p>
-        <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
-        <a class="btn btn-primary" href="property-detail.blade.php">View Details</a>
-      </div>
-      </div>
-      <!-- properties -->
-      <!-- properties -->
-      <div class="col-lg-4 col-sm-6">
-      <div class="properties">
-        <div class="image-holder"><img src="{{ asset('images/properties/1.jpg') }}" class="img-responsive" alt="properties">
-          <div class="status sold">Sold</div>
-        </div>
-        <h4><a href="property-detail.blade.php">Royal Inn</a></h4>
-        <p class="price">Price: $234,900</p>
-        <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
-        <a class="btn btn-primary" href="property-detail.blade.php">View Details</a>
-      </div>
-      </div>
-      <!-- properties -->
-
-      <!-- properties -->
-      <div class="col-lg-4 col-sm-6">
-      <div class="properties">
-        <div class="image-holder"><img src="{{ asset('images/properties/4.jpg') }}" class="img-responsive" alt="properties">
-          <div class="status sold">Sold</div>
-        </div>
-        <h4><a href="property-detail.blade.php">Royal Inn</a></h4>
-        <p class="price">Price: $234,900</p>
-        <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
-        <a class="btn btn-primary" href="property-detail.blade.php">View Details</a>
-      </div>
-      </div>
-      <!-- properties -->
-
-      <!-- properties -->
-      <div class="col-lg-4 col-sm-6">
-      <div class="properties">
-        <div class="image-holder"><img src="{{ asset('images/properties/3.jpg') }}" class="img-responsive" alt="properties">
-          <div class="status sold">Sold</div>
-        </div>
-        <h4><a href="property-detail.blade.php">Royal Inn</a></h4>
-        <p class="price">Price: $234,900</p>
-        <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
-        <a class="btn btn-primary" href="property-detail.blade.php">View Details</a>
+        <a class="btn btn-primary" href="{{route('propertydetail')}}">View Details</a>
       </div>
       </div>
       <!-- properties -->

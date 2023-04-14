@@ -41,7 +41,7 @@ table{background-color: #fff;}
 
 .header {padding: 20px 0;}
 .header ul{list-style: none;margin: 0; padding: 0;margin-top: 25px;}
-.header ul li{ display: inline-block; padding: 0 0 0 40px;}
+.header ul li{ display: inline-block; padding: 0 0 0 6px;}
 .header ul li a{ font-size: 19px;font-family: din;text-transform: uppercase;}
 .header ul li a:hover{text-decoration: none;}
 
@@ -121,7 +121,7 @@ table{background-color: #fff;}
 
 
 /*footer*/
-.footer{background:url(../images/bg.jpg) #222; padding: 20px 0; color: #999;} 
+.footer{background:url(../images/bg.jpg) #222; padding: 20px 0; color: #999;}
 .footer h4{color: #fff;border-bottom: 2px solid #131313;margin-bottom: 10px;padding-bottom: 10px;}
 .footer ul{list-style: none;padding: 0; }
 .footer a:hover{color: #fff;}
