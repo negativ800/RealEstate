@@ -71,7 +71,7 @@
     <!-- Header Starts -->
         <div class="header">
 
-            <a href="{{route('index')}}"><img src="{{ asset('images/logo.png') }}" alt="Realestate"></a>
+            <a href="{{route('index')}}"><img style="width: 171px" src="{{ asset('images/logo.jpeg') }}" alt="Realestate"></a>
 
             @auth()
                 <div class="dropdown pull-right ">

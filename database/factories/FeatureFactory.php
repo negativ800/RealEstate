@@ -11,7 +11,13 @@ class FeatureFactory extends Factory
         return [
             'air_condition' => fake()->boolean(),
             'central_heating' => fake()->boolean(),
-            'furniture' => fake()-> text(),
+            'furniture' => [
+                fake()->name ,
+                fake()->name ,
+                fake()->name ,
+                fake()->name ,
+                fake()->name ,
+            ],
         ];
     }
 }

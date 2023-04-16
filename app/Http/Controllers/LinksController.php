@@ -8,7 +8,9 @@ use Illuminate\Http\Request;
 class LinksController extends Controller
 {
     public function index(){
-        return view('index');
+        $units= Unit::all();
+       // return $unit;
+        return view('index', compact('units'));
     }
 
     public function about(){
@@ -31,6 +33,7 @@ class LinksController extends Controller
         return view('blogdetail');
     }
     public function property_detail(){
-        return view('property-detail');
+        $units= Unit::orderBy('price', 'asc')->limit(5)->get();
+        return view('property-detail', compact('units'));
     }
 }

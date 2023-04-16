@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('for_what', '10');
             $table->date('date_of_posting');
             $table->boolean('is_available');
-            $table->string('imag');
-            $table->string('components'); // bedrooms then living rooms then bathroom finally kitchen
+            $table->json('imag');
+            $table->json('components'); // bedrooms & living rooms & bathroom & kitchen
 
             $table->foreignId('posted_by')->references('id')->on('users');
             $table->foreignId('feature_id')->references('id')->on('features');

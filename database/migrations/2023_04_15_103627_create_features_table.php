@@ -12,7 +12,7 @@ return new class extends Migration
             $table->id();
             $table->boolean('air_condition');
             $table->boolean('central_heating');
-            $table->string('furniture');
+            $table->json('furniture');
             $table->timestamps();
         });
     }
