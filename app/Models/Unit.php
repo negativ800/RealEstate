@@ -26,4 +26,11 @@ class Unit extends Model
         'components' => 'array',
     ];
 
+    protected $searchable = [
+        'price',
+        'for_what',
+        'type',
+        'address',
+    ];
+
 }

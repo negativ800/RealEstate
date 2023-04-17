@@ -26,9 +26,38 @@ class LinksController extends Controller
     public function contact(){
         return view('contact');
     }
-    public function buysalerent(){
-        return view('buysalerent');
+    public function buysalerent(Request $request){
+        $units= Unit::orderBy('price', 'asc')->limit(5)->get();
+        $AllUnits = Unit::all();
+        $Result = Unit::all();
+        return view('buysalerent', compact(
+            'units',
+            'AllUnits',
+            'Result'
+        ));
+
     }
+    public function search(Request $request){
+ //#############################################################################################
+// #########################       ملعون ابو السيرش علي الي عاوزه   ##############################
+//################################################################################################
+//        $units= Unit::orderBy('price', 'asc')->limit(5)->get();
+//        $AllUnits = Unit::all();
+//
+//        $a = $request->input('for');
+//        $b = $request->input('address');
+//        $c = $request->input('type');
+//        $d = $request->input('price');
+//
+////        $Result = Unit::orwhere('for_what', $a )->orWhere('type', $c )->orWhere('price','>',  $d )->first();
+//        $Result = Unit::where('address', 'like', $a . '%')->first();
+//        return view('buysalerent', compact(
+//            'units',
+//            'AllUnits',
+//            'Result'
+//        ));
+    }
+
     public function blogdetail(){
         return view('blogdetail');
     }

@@ -40,32 +40,33 @@
     <!-- banner -->
     <h3>Buy, Sale & Rent</h3>
     <div class="searchbar">
-         <form method="get" action="{{route('buysalerent')}}">
+         <form method="POST" action="{{route('search')}}">
+             @csrf
+             @method('POST')
              <div class="row">
                  <div class="col-lg-6 col-sm-6">
                      <div class="row">
                          <div class="col-lg-3 col-sm-3 ">
                              <select id="for" name="for" class="form-control">
                                  <option>for what</option>
-                                 <option>Buy</option>
-                                 <option>Rent</option>
+                                 <option value="sale" >Buy</option>
+                                 <option value="rent">Rent</option>
                              </select>
                          </div>
                          <div class="col-lg-3 col-sm-3">
                              <select id="price" name="price" class="form-control">
                                  <option>Price</option>
-                                 <option>$150,000 - $200,000</option>
-                                 <option>$200,000 - $250,000</option>
-                                 <option>$250,000 - $300,000</option>
-                                 <option>$300,000 - above</option>
+                                 <option value="100000"> less than $50,000</option>
+                                 <option value="50000">less than $30,000</option>
+                                 <option value="30000">less than $15,000</option>
+                                 <option value="15000">less than $5000</option>
                              </select>
                          </div>
                          <div class="col-lg-3 col-sm-3">
                              <select id="type" name="type" class="form-control">
                                  <option>type</option>
-                                 <option>Property</option>
-                                 <option>Apartment</option>
-                                 <option>Office Space</option>
+                                 <option value="appartment">Apartment</option>
+                                 <option value="sallon" >Office Space</option>
                              </select>
                          </div>
                      </div>
@@ -74,7 +75,7 @@
                              <input name="address" type="text" class="form-control" placeholder="Address">
                          </div>
                          <div class="  col-lg-3 col-sm-3 ">
-                             <button class=" btn btn-success"  onclick="window.location.href='{{route('buysalerent')}}'">Find Now</button>
+                             <button class=" btn btn-success"  onclick="window.location.href='{{route('search')}}'">Find Now</button>
                          </div>
                      </div>
                  </div>
