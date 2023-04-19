@@ -2,9 +2,6 @@
 @php
 //this badge going to be used for the result of searching and to view all units
 @endphp
-{{--<pre>--}}
-{{--    {{print_r($Result)}}--}}
-{{--</pre>--}}
 <!-- banner -->
 <div class="inside-banner">
     <div class="container">
