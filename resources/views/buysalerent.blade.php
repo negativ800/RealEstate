@@ -1,6 +1,8 @@
 @include('header')
 @php
 //this badge gonna be used for the result of searching and to view all units
+
+
 @endphp
 {{--<pre>--}}
 {{--    {{print_r($Result)}}--}}
