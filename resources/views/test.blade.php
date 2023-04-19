@@ -1,6 +1,5 @@
 <?php
 
-
 @php $count = 0; @endphp
 @foreach($Result as $unit)
     @if ($count >= 15)
@@ -43,3 +42,33 @@
 {{--                                      data-original-title="Kitchen">1</span></div>--}}
 {{--                            <a class="btn btn-primary" href="{{route('propertydetail')}}">View Details</a>--}}
 {{--                        </div>--}}
+
+
+
+
+    public function searchableAs(): string
+    {
+    return 'units';
+    }
+
+    public function getSearchResult(): SearchResult
+    {
+    $title = "{$this->type} {$this->for_what} - {$this->address} - {$this->price}";
+    $url = route('search', $this->id);
+
+    return new SearchResult(
+    $this,
+    $title,
+    $url
+    );
+    }
+
+    public function searchableFields(): array
+    {
+    return [
+    'type',
+    'price',
+    'for_what',
+    'address'
+    ];
+    }

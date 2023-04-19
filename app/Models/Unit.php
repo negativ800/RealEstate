@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Unit extends Model
 {
     use HasFactory;
@@ -26,11 +27,5 @@ class Unit extends Model
         'components' => 'array',
     ];
 
-    protected $searchable = [
-        'price',
-        'for_what',
-        'type',
-        'address',
-    ];
-
+    /////////////////////////////////////////////////
 }

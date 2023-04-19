@@ -79,12 +79,17 @@
             <div class="col-lg-9 col-sm-8">
                 <div class="sortby clearfix">
                     <div class="pull-left result">Showing: {{count($AllUnits)}} </div>
-                    <div class="pull-right">
-                        <select class="form-control">
-                            <option>Sort by</option>
-                            <option>Price: Low to High</option>
-                            <option>Price: High to Low</option>
-                        </select></div>
+                    <form method="GET" action="{{route('sortData')}}" class="pull-right">
+                        <label>
+                            <input type="radio" name="sort" value="asc"  {{ isset($by) && $by =='asc'  ? 'checked' : '' }}>
+                            Price: Low to High
+                        </label><br>
+                        <label>
+                            <input type="radio" name="sort" value="desc" {{  isset($by) && $by == 'desc' ? 'checked' : '' }}>
+                            Price: High to Low
+                        </label><br>
+                        <button type="submit" class="btn btn-primary">Sort</button>
+                    </form>
 
                 </div>
                 <div class="row">
@@ -93,42 +98,40 @@
 
                     @php
                         $count = 0;
-
                     @endphp
-                    @foreach($Result as $unit)
-                        @if ($count >= 15)
-                            @break
-                        @endif
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="properties">
-                                <div class="image-holder"><img src="{{ $unit->imag[1] }}" class="img-responsive" alt="properties"/>
-                                    @if ($unit->is_available)
-                                        <div class="status sold">Available</div>
-                                    @else
-                                        <div class="status new">Sold</div>
-                                    @endif
+                    @if(is_array($Result) || is_object($Result))
+                        @foreach($Result as $unit)
+                            @if ($count >= 15)
+                                @break
+                            @endif
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="properties">
+                                    <div class="image-holder"><img src="{{ $unit->imag[1] }}" class="img-responsive" alt="properties"/>
+                                        @if ($unit->is_available)
+                                            <div class="status sold">Available</div>
+                                        @else
+                                            <div class="status new">Sold</div>
+                                        @endif
+                                    </div>
+                                    <h4><a href="{{route('propertydetail')}}">{{$unit->type}}</a></h4>
+                                    <p class="price">Price: ${{$unit->price}}</p>
+                                    <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">{{ substr($unit->components[0], 0, 1)}}</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">{{substr($unit->components[1], 0, 1) }}</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Bathroom">{{substr($unit->components[2], 0, 1) }}</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">{{substr($unit->components[3], 0, 1) }}</span> </div>
+                                    <a class="btn btn-primary"  href="{{route('propertydetail', $unit->id)}}" >View Details</a>
                                 </div>
-                                <h4><a href="{{route('propertydetail')}}">{{$unit->type}}</a></h4>
-                                <p class="price">Price: ${{$unit->price}}</p>
-                                <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">{{ substr($unit->components[0], 0, 1)}}</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">{{substr($unit->components[1], 0, 1) }}</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Bathroom">{{substr($unit->components[2], 0, 1) }}</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">{{substr($unit->components[3], 0, 1) }}</span> </div>
-                                <a class="btn btn-primary"  href="{{route('propertydetail', $unit->id)}}" >View Details</a>
                             </div>
-                        </div>
-                        @php $count++; @endphp
-                    @endforeach
+                            @php $count++; @endphp
+                        @endforeach
+                    @endif
 
                     <!-- properties -->
 
                     <div class="center">
-                        <ul class="pagination">
-                            <li><a href="#">«</a></li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">»</a></li>
-                        </ul>
+                        @if ($Result)
+                            {{ $Result->links() }}
+                        @else
+                            No results found.
+                        @endif
+
                     </div>
 
                 </div>
