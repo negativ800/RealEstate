@@ -1,6 +1,6 @@
 @include('header')
 @php
-//this badge going to be used for the result of searching and to view all units
+//this badge going to be used for the result of searching and to view all units search and view all
 @endphp
 <!-- banner -->
 <div class="inside-banner">
